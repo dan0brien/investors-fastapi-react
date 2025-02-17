@@ -1,11 +1,17 @@
-from database import Base
 from sqlalchemy import Column, Integer, String
+from database import Base
 
 class Investor(Base):
+    """
+    Represents an investor in the database.
+
+    This class corresponds to the 'investors' table in the database and stores 
+    information about individual investors.
+    """
     __tablename__ = 'investors'
 
-    id = Column(Integer, primary_key=True)#, index=True, autoincrement=True) #
-    investor_name = Column(String)#, primary_key=True)
+    id = Column(Integer, primary_key=True)
+    investor_name = Column(String)
     investory_type = Column(String)
     investor_country= Column(String)
     investor_date_added= Column(String)
